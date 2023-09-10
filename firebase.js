@@ -6,13 +6,22 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBmNEYArnMPCT7Bw_xWaxY5fhkbpqI5dtw",
-  authDomain: "newproject-397609.firebaseapp.com",
-  projectId: "newproject-397609",
-  storageBucket: "newproject-397609.appspot.com",
-  messagingSenderId: "1000410376015",
-  appId: "1:1000410376015:web:98c5cb598b8f36f0c2473a"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBmNEYArnMPCT7Bw_xWaxY5fhkbpqI5dtw",process.env.REACT_APP_API_KEY,
+//   authDomain: "newproject-397609.firebaseapp.com",process.env.REACT_APP_AUTHDOMAIN,
+//   projectId: "newproject-397609",process.env.REACT_APP_PROJECTID,
+//   storageBucket: "newproject-397609.appspot.com",process.env.REACT_APP_STORAGEBUCKET,
+//   messagingSenderId: "1000410376015",process.env.REACT_APP_MESSAGINGSENDERID,
+//   appId: "1:1000410376015:web:98c5cb598b8f36f0c2473a",process.env.REACT_APP_APPID,
+// };
 
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
