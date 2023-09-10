@@ -3,8 +3,8 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';    
 import { useState } from 'react';
 import Image from 'next/image';
-import { BsFacebook } from "react-icons/Bs";
-import { BsGoogle }from "react-icons/Bs";
+import { BsFacebook } from "react-icons/bs";
+import { BsGoogle }from "react-icons/bs";
 
 export default function Signin() {
   const [email, setEmail] = useState('');
@@ -13,13 +13,11 @@ export default function Signin() {
 
      // Google Handler function
      async function handleGoogleSignin(){
-        e.preventDefault();
         signIn('google', { callbackUrl : "http://localhost:3000"})
     }
 
     // Facebook Login 
     async function handleFacebookSignin(){
-        e.preventDefault();
         signIn('facebook', { callbackUrl : "http://localhost:3000"})
     }
 

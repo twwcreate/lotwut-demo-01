@@ -1,5 +1,5 @@
 import GoogleProvider from "next-auth/providers/google";
-import FacebookProvider from "next-auth/providers/Facebook";
+import FacebookProvider from "next-auth/providers/facebook";
 import CredentialsProvider from 'next-auth/providers/credentials';
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import { auth } from "../../../../../firebase";
@@ -9,10 +9,10 @@ export const options = ({
         signIn: "/login",
     },
     providers: [
-        FacebookProvider({
-              clientId: process.env.FACEBOOK_CLIENT_ID,
-              clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-            }),
+      FacebookProvider({
+        clientId: process.env.FACEBOOK_CLIENT_ID,
+        clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
